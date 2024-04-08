@@ -96,7 +96,8 @@ on:
           - jdk-11.0.11+9
         
   pull_request:
-    branches: [ "master" ]
+    branches:
+       - master
 jobs:
   build:
 
