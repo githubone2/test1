@@ -43,7 +43,66 @@ on:
         type: string
         required: ture
         description: 'Upgrade with JDK version'
-      
+  workflow_dispatch:
+    inputs:
+      ref_branch:
+        type: string
+        required: true
+        description: 'Referance branch or tag'
+        default: common_nssm_col_pub
+
+      environment_name:
+        type: choice
+        required: true
+        description: 'Environmnt name'
+        options: 
+          - devopsazure
+          - devops
+          - lab1zus1
+          - dev1zus1
+
+      instance_name:
+        type: text
+        required: true
+        description: 'Instance name'
+
+      instance_type:
+        type: choice
+        required: true
+        description: 'Instance type'
+        options:
+          - Collaborate
+          - Publisher
+          - Hybrid
+          - Microservice
+
+      deploy_version:
+        type: text
+        required: true
+        description: 'Deploy with War/Jar version'
+
+      upgrade_version:
+        type: text
+        required: true
+        description: 'Upgrade with War/Jar version'
+
+      deploy_jdk_version:
+        type: choice
+        required: true
+        default: jdk-17.0.8+8
+        description: 'Deploy with JDK version'
+        options:
+          - jdk-17.0.8+8
+          - jdk-11.0.11+9
+          
+      upgrade_jdk_version:
+        type: choice
+        required: true
+        default: jdk-17.0.8+8
+        description: 'Upgrade with JDK version'
+        options:
+          - jdk-17.0.8+8
+          - jdk-11.0.11+9
         
   push:
     branches: [ "main" ]
