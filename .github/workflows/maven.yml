@@ -9,6 +9,42 @@
 name: Java CI with Maven
 
 on:
+  workflow_call:
+    inputs:
+      ref_branch:
+        type: string
+        required: true
+        description: 'Referance branch or tag"
+      environment_name:
+        type: string
+        required: true
+        description: 'Environment name'
+      instance_name:
+        type: string
+        required: true
+        description: 'Instance name'
+      instance_type:
+        type: string
+        required: true
+        description: 'Instance type'
+      deploy_version:
+        type: string
+        required: ture
+        description: 'Deploy with War/Jar version'
+      upgrade_version:
+        type: string
+        required: ture
+        description: 'Upgrade with War/Jar version'
+      deploy_jdk_version:
+        type: string
+        required: ture
+        description: 'Depoy with JDK version'
+      upgrade_jdk_version:
+        type: string
+        required: ture
+        description: 'Upgrade with JDK version'
+      
+        
   push:
     branches: [ "main" ]
   pull_request:
