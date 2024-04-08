@@ -14,11 +14,11 @@ on:
       ref_branch:
         type: string
         required: true
-        description: 'Referance branch or tag"
+        description: 'Referance branch or tag'
       environment_name:
-        type: string
-        required: true
-        description: 'Environment name'
+         type: string
+         required: true
+         description: 'Environment name'
       instance_name:
         type: string
         required: true
