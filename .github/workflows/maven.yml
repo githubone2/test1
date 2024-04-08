@@ -1,13 +1,4 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-name: Java CI with Maven
-
+name: 'Java CI with Maven'
 on:
   workflow_call:
     inputs:
@@ -29,19 +20,19 @@ on:
         description: 'Instance type'
       deploy_version:
         type: string
-        required: ture
+        required: true
         description: 'Deploy with War/Jar version'
       upgrade_version:
         type: string
-        required: ture
+        required: true
         description: 'Upgrade with War/Jar version'
       deploy_jdk_version:
         type: string
-        required: ture
+        required: true
         description: 'Depoy with JDK version'
       upgrade_jdk_version:
         type: string
-        required: ture
+        required: true
         description: 'Upgrade with JDK version'
   workflow_dispatch:
     inputs:
